@@ -7,6 +7,8 @@ body {
   margin: 0;
 }
 .main-container {
+  display: flex;
+  flex-direction: column;
   width: 100vw;
   height: 1000px;
   background-color: #bbb;
@@ -56,4 +58,19 @@ body {
   width: 100vw;
   height: 1000px;
   background-color: #bbb;
+}
+.padding-container {
+  height: 120px;
+}
+.main-body-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+
+.body-container {
+  border: solid black 3px;
+  height: 450px;
+  width: 1200px;
 }
