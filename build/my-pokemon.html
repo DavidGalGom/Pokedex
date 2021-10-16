@@ -9,11 +9,15 @@
       name="description"
       content="The first APIweb of a developer student "
     />
+    <script
+      src="https://kit.fontawesome.com/07ba018237.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="favicon.png" />
   </head>
   <body>
-    <div class="my-pokemon-main-container">
+    <div class="main-container">
       <header class="main-header">
         <a href="/index.html"
           ><img src="pokemon-logo.svg" alt="Pokemon Logo" class="header-img"
@@ -25,11 +29,66 @@
         />
         <h1 class="main-title">My Pokemon Team</h1>
         <img src="Eevee.png" alt="Pokemon eevee" class="header-eevee-img" />
-        <a href="/index.html"
-          ><button class="my-team-button">Back home</button></a
+        <a href="/my-pokemon.html"
+          ><button class="my-team-button">My pokemon team</button></a
         >
       </header>
+      <div class="padding-container"></div>
+      <main class="main-body-container">
+        <h2 class="body-title">My Pokemons</h2>
+        <div class="body-container">
+          <ul class="pokedex-list">
+            <li class="pokemon-card">
+              <div class="pokemon-card-header">
+                <h3 class="pokemon-name">Bulbasaur</h3>
+                <i class="fas fa-star"></i>
+              </div>
+              <img
+                class="pokemon-img"
+                src="bulbasaur.png"
+                alt="Image of the pokemon"
+                width="174"
+                height="160"
+              />
+              <p class="pokemon-index">Pokedex Number: 001</p>
+              <p class="pokemon-type">Type:Plant and Poison</p>
+            </li>
+            <li class="pokemon-card"></li>
+            <li class="pokemon-card"></li>
+            <li class="pokemon-card"></li>
+            <li class="pokemon-card"></li>
+            <li class="pokemon-card"></li>
+            <li class="pokemon-card"></li>
+            <li class="pokemon-card"></li>
+            <li class="pokemon-card"></li>
+            <li class="pokemon-card"></li>
+          </ul>
+        </div>
+      </main>
+      <div class="buttons-body-container">
+        <button class="previous-button">Previous</button>
+        <button class="next-button">Next</button>
+      </div>
     </div>
+    <footer class="footer">
+      <div class="footer-container">
+        <img
+          class="footer-img"
+          src="pokeball.gif"
+          alt="Pokeball image"
+          width="275"
+          height="80"
+        />
+        <h2 class="footer-title">Copyright Poke-API-David-Gálvez-2021</h2>
+        <img
+          class="footer-img-inverted"
+          src="pokeball.gif"
+          alt="Pokeball image"
+          width="275"
+          height="80"
+        />
+      </div>
+    </footer>
     <script src="index.js" type="module"></script>
   </body>
 </html>
