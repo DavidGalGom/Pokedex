@@ -69,7 +69,26 @@ body {
   align-items: center;
   align-content: center;
 }
-
+.buttons-body-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 200px;
+  padding-top: 50px;
+}
+.next-button,
+.previous-button {
+  margin: 0 50px;
+  width: 200px;
+  height: 100px;
+  cursor: pointer;
+  background-color: #999;
+  &:hover {
+    background-color: #ddd;
+  }
+}
 .body-container {
   background-color: #ef5350;
   display: flex;
@@ -145,7 +164,7 @@ body {
   align-content: center;
   justify-content: space-between;
   height: 100px;
-  width: 100%;
+  width: 100vw;
   background-color: #ef5350;
 }
 .footer-title {
