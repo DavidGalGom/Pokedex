@@ -136,3 +136,21 @@ body {
     color: gold;
   }
 }
+.footer-container {
+  border-top: solid black 3px;
+  padding: 5px 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  height: 100px;
+  width: 100%;
+  background-color: #ef5350;
+}
+.footer-title {
+  font-size: medium;
+}
+.footer-img-inverted {
+  transform: scaleX(-1);
+}
