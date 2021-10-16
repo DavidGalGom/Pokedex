@@ -96,10 +96,43 @@ body {
   padding: 20px;
 }
 .pokemon-card {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
   background-color: #999;
   border: solid black 3px;
   width: 202px;
   height: 300px;
   margin: 10px;
   padding: 10px;
+  &:hover {
+    background-color: #ddd;
+  }
+}
+.pokemon-name {
+  padding: 5px;
+  margin: 0;
+}
+.pokemon-img {
+  border: solid black 1px;
+  cursor: pointer;
+  margin: 10px 0px;
+}
+.pokemon-type,
+.pokemon-index {
+  margin: 0;
+  padding: 5px;
+}
+.pokemon-card-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+}
+.fas.fa-star {
+  cursor: pointer;
+  &:hover {
+    color: gold;
+  }
 }
