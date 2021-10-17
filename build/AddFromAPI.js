@@ -21,12 +21,12 @@ class AddFromAPI extends Component {
     const getPokemon = new Service(this.url);
     const responsePokemon = await getPokemon.getResponse();
     this.pokemon = responsePokemon;
-    this.name = responsePokemon.name;
+    this.name = responsePokemon.name.toUpperCase();
     this.image = responsePokemon.sprites.other.dream_world.front_default;
     this.index = responsePokemon.id;
-    this.type1 = responsePokemon.types[0].type.name;
+    this.type1 = responsePokemon.types[0].type.name.toUpperCase();
     if (responsePokemon.types[1] !== undefined) {
-      this.type2 = responsePokemon.types[1].type.name;
+      this.type2 = responsePokemon.types[1].type.name.toUpperCase();
     } else {
       this.type2 = "";
     }
@@ -48,8 +48,10 @@ class AddFromAPI extends Component {
                   height="160"
                 />
                 <p class="pokemon-index">Pokedex Number: ${this.index}</p>
+                <div class="type-container">
                 <p class="pokemon-type">Type:${this.type1}</p>
                 <p class="pokemon-type">${this.type2}</p>
+                </div>
               `;
     this.element.innerHTML = html;
   }

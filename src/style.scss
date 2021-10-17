@@ -114,7 +114,7 @@ body {
   list-style: none;
   padding: 20px;
 }
-.pokemon-card {
+.pokedex-card {
   display: flex;
   align-items: center;
   align-content: center;
@@ -128,6 +128,12 @@ body {
   &:hover {
     background-color: #ddd;
   }
+}
+.type-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
 }
 .pokemon-name {
   padding: 5px;
