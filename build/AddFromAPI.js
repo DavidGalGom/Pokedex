@@ -37,7 +37,7 @@ class AddFromAPI extends Component {
     const html = `
               <div class="pokemon-card-header">
                   <h3 class="pokemon-name">${this.name}</h3>
-                  <i class="fas fa-star"></i>
+                  <button class="star-button"><i class="fas fa-star"></i></button>
                 </div>
                 <img
                   class="pokemon-img"
@@ -46,7 +46,7 @@ class AddFromAPI extends Component {
                   width="174"
                   height="160"
                 />
-                <p class="pokemon-index">Pokedex Number: #${this.index}</p>
+                <p class="pokemon-index">Number #${this.index}</p>
                 <div class="type-container">
                 <p class="pokemon-type">Type:${this.type1}</p>
                 <p class="pokemon-type">${this.type2}</p>
