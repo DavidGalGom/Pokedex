@@ -1,7 +1,8 @@
+import Component from "./Component.js";
 import Page from "./Page.js";
 import Service from "./Service.js";
 
-class AddFromAPI extends Page {
+class AddFromAPI extends Component {
   url;
   pokemon = {};
   name;
@@ -10,10 +11,8 @@ class AddFromAPI extends Page {
   type1;
   type2;
 
-  constructor(parentElement, className, htmlTag, pageTitle, url) {
-    super(parentElement, className, htmlTag, pageTitle);
-    this.element = document.createElement(htmlTag);
-    this.element.className = className;
+  constructor(parentElement, pageTitle, url) {
+    super(parentElement, "pokedex-card", "li", pageTitle);
     this.url = url;
     this.getProperties();
   }
@@ -25,8 +24,13 @@ class AddFromAPI extends Page {
     this.name = responsePokemon.name;
     this.image = responsePokemon.sprites.other.dream_world.front_default;
     this.index = responsePokemon.id;
-    this.type1 = responsePokemon.types[0].type;
-    this.type2 = responsePokemon.types[1].type;
+    this.type1 = responsePokemon.types[0].type.name;
+    if (responsePokemon.types[1] !== undefined) {
+      this.type2 = responsePokemon.types[1].type.name;
+    } else {
+      this.type2 = "";
+    }
+
     this.generateHTML();
   }
 
@@ -44,7 +48,8 @@ class AddFromAPI extends Page {
                   height="160"
                 />
                 <p class="pokemon-index">Pokedex Number: ${this.index}</p>
-                <p class="pokemon-type">Type:${this.type1} and ${this.type2}</p>
+                <p class="pokemon-type">Type:${this.type1}</p>
+                <p class="pokemon-type">${this.type2}</p>
               `;
     this.element.innerHTML = html;
   }

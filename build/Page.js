@@ -1,21 +1,16 @@
 import AddFromAPI from "./AddFromAPI.js";
+import Component from "./Component.js";
 import Service from "./Service.js";
 
-class Page {
-  parentElement;
-  element;
+class Page extends Component {
   pageTitle;
   url;
   pokemons;
 
-  constructor(parentElement, className, htmlTag = "div", pageTitle, url) {
-    this.parentElement = parentElement;
-    this.element = document.createElement(htmlTag);
-    this.element.className = className;
+  constructor(parentElement, pageTitle, url) {
+    super(parentElement, "page", "div");
     this.pageTitle = pageTitle;
     this.url = url;
-
-    this.parentElement.append(this.element);
     this.pickUrl();
     this.generateHTML();
   }
@@ -26,8 +21,7 @@ class Page {
     this.pokemons = response.results;
     const fatherList = document.querySelector(".pokedex-list");
     this.pokemons.map(
-      (pokemon) =>
-        new AddFromAPI(fatherList, "pokemon-card", "li", "Pokedex", pokemon.url)
+      (pokemon) => new AddFromAPI(fatherList, "Pokedex", pokemon.url)
     );
   }
 

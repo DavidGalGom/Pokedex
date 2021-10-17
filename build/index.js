@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+import Component from "./Component.js";
 import Page from "./Page.js";
 import AddList from "./AddList.js";
 import AddFromAPI from "./AddFromAPI.js";
@@ -6,8 +7,6 @@ import AddFromAPI from "./AddFromAPI.js";
 const fatherPage = document.querySelector(".page-container");
 const mainPage = new Page(
   fatherPage,
-  "page",
-  "div",
   "Pokedex",
   "https://pokeapi.co/api/v2/pokemon?offset=00&limit=10"
 );
