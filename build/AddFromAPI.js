@@ -9,6 +9,46 @@ class AddFromAPI extends Component {
   index;
   type1;
   type2;
+  colors = {
+    steel: "rgb(173, 168, 145)",
+    water: "rgb(66, 163, 196)",
+    bug: "rgb(107, 178, 134)",
+    dragon: "rgb(59, 132, 211)",
+    electric: "rgb(229, 229, 48)",
+    ghost: "rgb(96, 62, 209)",
+    fire: "rgb(252, 42, 42)",
+    fairy: "rgb(234, 105, 219)",
+    ice: "rgb(109, 231, 242)",
+    fighting: "rgb(209, 69, 97)",
+    normal: "rgb(173, 162, 165)",
+    grass: "rgb(83, 191, 59)",
+    psychic: "rgb(242, 21, 212)",
+    rock: "rgb(147, 86, 20)",
+    dark: "rgb(63, 61, 59)",
+    ground: "rgb(214, 89, 6)",
+    poison: "rgb(168, 57, 153)",
+    flying: "rgb(118, 154, 158)",
+  };
+  colors2 = {
+    steel: "rgb(173, 168, 145,0.5)",
+    water: "rgb(66, 163, 196,0.5)",
+    bug: "rgb(107, 178, 134,0.5)",
+    dragon: "rgb(59, 132, 211,0.5)",
+    electric: "rgb(229, 229, 48,0.5)",
+    ghost: "rgb(96, 62, 209,0.5)",
+    fire: "rgb(252, 42, 42,0.5)",
+    fairy: "rgb(234, 105, 219,0.5)",
+    ice: "rgb(109, 231, 242,0.5)",
+    fighting: "rgb(209, 69, 97,0.5)",
+    normal: "rgb(173, 162, 165,0.5)",
+    grass: "rgb(83, 191, 59,0.5)",
+    psychic: "rgb(242, 21, 212,0.5)",
+    rock: "rgb(147, 86, 20,0.5)",
+    dark: "rgb(63, 61, 59,0.5)",
+    ground: "rgb(214, 89, 6,0.5)",
+    poison: "rgb(168, 57, 153,0.5)",
+    flying: "rgb(118, 154, 158,0.5)",
+  };
 
   constructor(parentElement, pageTitle, url) {
     super(parentElement, "pokedex-card", "li", pageTitle);
@@ -23,6 +63,9 @@ class AddFromAPI extends Component {
     this.name = responsePokemon.name.toUpperCase();
     this.image = responsePokemon.sprites.other.dream_world.front_default;
     this.index = responsePokemon.id;
+    this.type1 = responsePokemon.types[0].type.name;
+    this.element.style.borderColor = this.colors[this.type1];
+    this.element.style.background = this.colors2[this.type1];
     this.type1 = responsePokemon.types[0].type.name.toUpperCase();
     if (responsePokemon.types[1] !== undefined) {
       this.type2 = responsePokemon.types[1].type.name.toUpperCase();

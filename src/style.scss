@@ -125,12 +125,6 @@ body {
   height: 300px;
   margin: 10px;
   padding: 10px;
-  &:hover {
-    .star-button {
-      background-color: #ddd;
-    }
-    background-color: #ddd;
-  }
 }
 .type-container {
   display: flex;
@@ -169,13 +163,8 @@ body {
   }
 }
 .star-button {
-  background-color: #999;
   border: none;
-  &:active {
-    .fas.fa-star {
-      color: gold;
-    }
-  }
+  background-color: transparent;
 }
 .footer-container {
   border-top: solid black 3px;
