@@ -140,9 +140,13 @@ body {
   margin: 0;
 }
 .pokemon-img {
-  border: solid black 1px;
   cursor: pointer;
   margin: 10px 0px;
+  &:hover {
+    width: 194px;
+    height: 180px;
+    margin: 0;
+  }
 }
 .pokemon-type,
 .pokemon-index {

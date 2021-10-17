@@ -3,6 +3,7 @@ import Component from "./Component.js";
 import Page from "./Page.js";
 import AddList from "./AddList.js";
 import AddFromAPI from "./AddFromAPI.js";
+import Button from "./Button.js";
 
 const fatherPage = document.querySelector(".page-container");
 const mainPage = new Page(
@@ -10,11 +11,11 @@ const mainPage = new Page(
   "Pokedex",
   "https://pokeapi.co/api/v2/pokemon?offset=00&limit=10"
 );
-/* const fatherList = document.querySelector(".pokedex-list");
-const newTenPokemon = new AddFromAPI(
-  fatherList,
-  "pokemon-card",
-  "li",
-  "Pokedex",
-  "https://pokeapi.co/api/v2/pokemon?offset=00&limit=10"
-); */
+const fatherButton = document.querySelector(".buttons-body-container");
+const previousButton = new Button(fatherButton, "previous-button", "Back", () =>
+  mainPage.backPage()
+);
+
+const nextButton = new Button(fatherButton, "next-button", "Next", () =>
+  mainPage.passPage()
+);

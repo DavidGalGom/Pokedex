@@ -1,5 +1,4 @@
 import Component from "./Component.js";
-import Page from "./Page.js";
 import Service from "./Service.js";
 
 class AddFromAPI extends Component {
@@ -47,7 +46,7 @@ class AddFromAPI extends Component {
                   width="174"
                   height="160"
                 />
-                <p class="pokemon-index">Pokedex Number: ${this.index}</p>
+                <p class="pokemon-index">Pokedex Number: #${this.index}</p>
                 <div class="type-container">
                 <p class="pokemon-type">Type:${this.type1}</p>
                 <p class="pokemon-type">${this.type2}</p>
