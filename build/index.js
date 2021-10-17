@@ -12,10 +12,10 @@ const mainPage = new Page(
   "https://pokeapi.co/api/v2/pokemon?offset=00&limit=10"
 );
 const fatherButton = document.querySelector(".buttons-body-container");
-const nextButton = new Button(fatherButton, "next-button", "Next", passPage);
-const previousButton = new Button(
-  fatherButton,
-  "previous-button",
-  "Back",
-  backPage
+const previousButton = new Button(fatherButton, "previous-button", "Back", () =>
+  console.log("back")
+);
+
+const nextButton = new Button(fatherButton, "next-button", "Next", () =>
+  console.log("next")
 );
