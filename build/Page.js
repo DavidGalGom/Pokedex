@@ -6,6 +6,7 @@ class Page extends Component {
   pageTitle;
   url;
   pokemons;
+  offset = 0;
 
   constructor(parentElement, pageTitle, url) {
     super(parentElement, "page", "div");
@@ -20,6 +21,7 @@ class Page extends Component {
     const response = await urlPicked.getResponse();
     this.pokemons = response.results;
     const fatherList = document.querySelector(".pokedex-list");
+    fatherList.innerHTML = "";
     this.pokemons.map(
       (pokemon) => new AddFromAPI(fatherList, "Pokedex", pokemon.url)
     );
@@ -37,6 +39,24 @@ class Page extends Component {
         
       </div>`;
     this.element.innerHTML = html;
+  }
+
+  passPage() {
+    if (this.offset < 1118) {
+      this.offset += 10;
+      this.url = `https://pokeapi.co/api/v2/pokemon?offset=${this.offset}&limit=10`;
+      this.pickUrl();
+      return this.url;
+    }
+  }
+
+  backPage() {
+    if (this.offset > 0) {
+      this.offset -= 10;
+      this.url = `https://pokeapi.co/api/v2/pokemon?offset=${this.offset}&limit=10`;
+      this.pickUrl();
+      return this.url;
+    }
   }
 }
 

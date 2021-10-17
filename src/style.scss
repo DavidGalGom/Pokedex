@@ -142,6 +142,11 @@ body {
 .pokemon-img {
   cursor: pointer;
   margin: 10px 0px;
+  &:hover {
+    width: 194px;
+    height: 180px;
+    margin: 0;
+  }
 }
 .pokemon-type,
 .pokemon-index {

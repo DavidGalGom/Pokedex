@@ -13,18 +13,10 @@ class Button extends Component {
     this.element.textContent = this.text;
 
     this.events();
-    this.passPage();
-    this.backPage();
   }
 
   events() {
     this.element.addEventListener("click", this.actionOnClick);
-  }
-  passPage() {
-    this.text = "Nuxt";
-  }
-  backPage() {
-    this.text = "Buck";
   }
 }
 

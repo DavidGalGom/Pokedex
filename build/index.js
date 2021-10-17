@@ -13,9 +13,9 @@ const mainPage = new Page(
 );
 const fatherButton = document.querySelector(".buttons-body-container");
 const previousButton = new Button(fatherButton, "previous-button", "Back", () =>
-  console.log("back")
+  mainPage.backPage()
 );
 
 const nextButton = new Button(fatherButton, "next-button", "Next", () =>
-  console.log("next")
+  mainPage.passPage()
 );
