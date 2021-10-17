@@ -34,8 +34,7 @@ class Page extends Component {
         </div>
       </main>
       <div class="buttons-body-container">
-        <button class="previous-button">Previous</button>
-        <button class="next-button">Next</button>
+        
       </div>`;
     this.element.innerHTML = html;
   }
